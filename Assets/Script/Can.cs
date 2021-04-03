@@ -4,15 +4,12 @@ using UnityEngine;
 
 public class Can : MonoBehaviour
 {
-    // Start is called before the first frame update
-    void Awake()
-    {
-        
-    }
+    float rotateSpeed = 80;
 
     // Update is called once per frame
     void Update()
     {
-        
+        transform.Rotate(Vector3.up * rotateSpeed * Time.deltaTime, Space.World);
     }
+
 }
