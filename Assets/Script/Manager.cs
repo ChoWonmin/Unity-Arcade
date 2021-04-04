@@ -8,12 +8,14 @@ public class Manager : MonoBehaviour
 {
     public int stage = 0;
     public int stageItemCount;
+    public Text stageText;
     public Text stageItemCountText;
     public Text playerItemCountText;
 
     private void Awake()
     {
         // stageItemCountText.text = "/ " + stageItemCount;
+        stageText.text = "Stage : " + (stage+1);
     }
 
     public void updateScoreText(int score)
@@ -23,7 +25,6 @@ public class Manager : MonoBehaviour
 
     public void checkClearSatage(int score)
     {
-        Debug.Log(score);
         if (score < stageItemCount)
         {
             SceneManager.LoadScene(stage);
